@@ -26,6 +26,7 @@
       .player {
         width: 42.5%;
         padding: 4px;
+
         /* border-left: 1px solid whitesmoke; */
       }
       .rating {
@@ -34,7 +35,13 @@
         padding: 4px;
       }
 
-      .rating:nth-child(odd) {
+      .loading:hover {
+        text-decoration: underline;
+        color: blue;
+        cursor: pointer;
+      }
+
+      /* .rating:nth-child(odd) {
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
       }
@@ -49,18 +56,36 @@
         border: 0.5px solid black;
         border-radius: 4px;
         --webkit-border-radius: 4px;
+      } */
+
+      .rating-nth {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+
+      .ranking-nth {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      .tabrow-nth {
+        background: whitesmoke;
+        border: 0.5px solid black;
+        border-radius: 4px;
+        --webkit-border-radius: 4px;
       }
     </style>
   </head>
 
   <body>
+    <noscript>Javascript not enabled</noscript>
     <table cellspacing="0" class="tab">
       <tr class="tabrow">
         <th class="ranking">Ranking</th>
         <th class="player">Player</th>
         <th class="rating">Rating</th>
       </tr>
-      <tr class="tabrow">
+      <tr class="tabrow loading">
         <td></td>
         <td>Loading...</td>
         <td></td>
@@ -82,6 +107,6 @@
       </tr> -->
     </table>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
